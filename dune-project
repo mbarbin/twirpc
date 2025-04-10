@@ -19,7 +19,8 @@
 
 (package
  (name twirpc)
- (synopsis "Opinionated wrappers to build RPC clients and servers with ocaml-twirp")
+ (synopsis
+  "Opinionated wrappers to build RPC clients and servers with ocaml-twirp")
  (depends
   (ocaml
    (>= 5.2))
@@ -72,8 +73,6 @@
  (depends
   (ocaml
    (>= 5.2))
-  (twirpc
-   (= :version))
   (ocamlformat
    (and
     :with-dev-setup
@@ -133,6 +132,8 @@
    (and
     (>= v0.17)
     (< v0.18)))
+  (twirpc
+   (= :version))
   (sherlodoc
    (and
     :with-doc
@@ -146,10 +147,6 @@
  (depends
   (ocaml
    (>= 5.2))
-  (twirpc
-   (= :version))
-  (twirpc-tests
-   (= :version))
   (ocamlformat
    (and
     :with-dev-setup
@@ -209,6 +206,10 @@
    (and
     (>= v0.17)
     (< v0.18)))
+  (twirpc
+   (= :version))
+  (twirpc-tests
+   (= :version))
   (sherlodoc
    (and
     :with-doc
