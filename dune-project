@@ -52,6 +52,8 @@
    (>= 0.2.2))
   (letfun
    (>= 0.0.1))
+  (ocaml-protoc
+   (>= 3.1))
   (parsexp
    (and
     (>= v0.17)
@@ -161,6 +163,8 @@
    (>= 0.2.2))
   (letfun
    (>= 0.0.1))
+  (ocaml-protoc
+   (>= 3.1))
   (parsexp
    (and
     (>= v0.17)
@@ -269,6 +273,8 @@
    (and
     (>= v0.17)
     (< v0.18)))
+  (ocaml-protoc
+   (>= 3.1))
   (pplumbing
    (>= 0.0.9))
   (ppx_compare
