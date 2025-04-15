@@ -1,0 +1,27 @@
+(library
+ (name twirpc_test_helpers)
+ (public_name twirpc.twirpc-test-helpers)
+ (flags
+  :standard
+  -w
+  +a-4-40-41-42-44-45-48-66
+  -warn-error
+  +a
+  -open
+  Base
+  -open
+  Stdio)
+ (libraries
+  base
+  fpath
+  shexp.process
+  stdio
+  threads
+  twirpc_client
+  twirpc_discovery
+  unix)
+ (instrumentation
+  (backend bisect_ppx))
+ (lint
+  (pps ppx_js_style -allow-let-operators -check-doc-comments))
+ (preprocess no_preprocessing))
