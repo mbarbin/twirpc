@@ -140,3 +140,18 @@ let server_rpc
   match T.rpc with
   | Rpc.T { server_rpc; _ } -> server_rpc
 ;;
+
+let server
+  : type request response.
+    (request, response) t -> handler:'a -> 'a Pbrt_services.Server.t
+  =
+  fun t ~handler ->
+  let module T = (val t : S with type Request.t = request and type Response.t = response)
+  in
+  match T.rpc with
+  | Rpc.T { client_rpc; _ } ->
+    { Pbrt_services.Server.service_name = client_rpc.service_name
+    ; package = client_rpc.package
+    ; handlers = [ handler ]
+    }
+;;

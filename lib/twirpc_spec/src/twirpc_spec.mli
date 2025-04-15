@@ -67,3 +67,9 @@ val client_rpc
 val server_rpc
   :  ('request, 'response) t
   -> ('request, unary, 'response, unary) Pbrt_services.Server.rpc
+
+(** Return the rpc wrapped into a server value with a single handler.
+    This is abusing the [Twirp_tiny_httpd] api that require that
+    wrapped value. This is outside of the intended usage, so we should
+    probably revisit at some point. *)
+val server : _ t -> handler:'a -> 'a Pbrt_services.Server.t
