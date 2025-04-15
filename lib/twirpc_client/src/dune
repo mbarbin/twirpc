@@ -1,10 +1,7 @@
 (library
  (name twirpc_client)
  (public_name twirpc.twirpc-client)
- (flags :standard -w +a-4-40-41-42-44-45-48-66 -warn-error +a -open Base
-;; CR mbarbin: Remove
--w -69
-)
+ (flags :standard -w +a-4-40-41-42-44-45-48-66 -warn-error +a -open Base)
  (libraries base ezcurl twirp_core twirp_ezcurl twirpc_spec sexplib0)
  (instrumentation
   (backend bisect_ppx))
