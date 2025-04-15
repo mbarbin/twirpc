@@ -1,6 +1,0 @@
-(executable
- (name main)
- (public_name twirpc)
- (package twirpc)
- (flags :standard -w +a-4-40-41-42-44-45-48-66 -warn-error +a)
- (libraries pplumbing.cmdlang-cmdliner-runner twirpc))
