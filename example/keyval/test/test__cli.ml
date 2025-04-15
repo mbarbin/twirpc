@@ -1,5 +1,5 @@
 (* In this test we demonstrate how to exercise the command line interface of an
-   eio-rpc application talking to a server, from an expect test. The goal is to
+   twirpc application talking to a server, from an expect test. The goal is to
    be sort of like a cram test, but using your favorite programming language
    instead of bash. *)
 

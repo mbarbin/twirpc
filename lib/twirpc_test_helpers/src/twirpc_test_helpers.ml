@@ -123,7 +123,7 @@ let with_server
       ~f
   =
   let module C = (val config : Config.S) in
-  let temp_file = Stdlib.Filename.temp_file "eio_unix_socket_test" ".sock" in
+  let temp_file = Stdlib.Filename.temp_file "unix_socket_test" ".sock" in
   Unix.unlink temp_file;
   let listening_config : Twirpc_discovery.Listening_config.t =
     match sockaddr_kind with
