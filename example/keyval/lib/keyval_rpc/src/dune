@@ -11,7 +11,7 @@
   Base
   -open
   Base_quickcheck)
- (libraries base base_quickcheck twirpc_spec keyval keyval_rpc_proto parsexp)
+ (libraries base base_quickcheck keyval keyval_rpc_proto parsexp twirpc_spec)
  (instrumentation
   (backend bisect_ppx))
  (lint

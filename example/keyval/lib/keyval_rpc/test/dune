@@ -15,11 +15,11 @@
  (libraries
   base
   expect_test_helpers_core.expect_test_helpers_base
-  twirpc_quickcheck
   keyval
   keyval_rpc
   keyval_rpc_proto
-  pbrt)
+  pbrt
+  twirpc_quickcheck)
  (instrumentation
   (backend bisect_ppx))
  (lint

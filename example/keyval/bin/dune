@@ -1,6 +1,6 @@
 (executable
  (name main)
- (public_name keyval)
+ (public_name twirp-keyval)
  (package twirpc-tests)
  (flags :standard -w +a-4-40-41-42-44-45-48-66 -warn-error +a)
  (libraries base cmdlang cmdlang-to-cmdliner cmdliner keyval_cli)

@@ -18,11 +18,11 @@
  (libraries
   base
   expect_test_helpers_core.expect_test_helpers_base
-  twirpc_client
-  twirpc_test_helpers
   keyval
   keyval_rpc
-  letfun)
+  letfun
+  twirpc_client
+  twirpc_test_helpers)
  (instrumentation
   (backend bisect_ppx))
  (lint

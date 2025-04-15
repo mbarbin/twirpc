@@ -19,14 +19,14 @@
   base
   cmdlang
   fmt
-  tiny_httpd
-  twirpc_client
-  twirpc_discovery
-  twirpc_server
   keyval
   keyval_rpc
   keyval_server
   stdio
+  tiny_httpd
+  twirpc_client
+  twirpc_discovery
+  twirpc_server
   unix)
  (instrumentation
   (backend bisect_ppx))
