@@ -17,7 +17,7 @@ let%expect_test "offline" =
   keyval [ [ "validate-key"; "my-key" ] ];
   [%expect
     {|
-    keyval: unknown option '--unix-socket'.
+    keyval: unknown option '--discovery-file'.
     Usage: keyval validate-key [OPTION]… KEY
     Try 'keyval validate-key --help' or 'keyval --help' for more information.
     [124]
@@ -83,8 +83,10 @@ let%expect_test "offline" =
   keyval ~offline:true [ [ "list-keys" ] ];
   [%expect
     {|
-    ( "Eio.Io Net Connection_failure Refused Unix_error (Connection refused, \"connect\", \"\"),\
-     \n  connecting to tcp:127.0.0.1:8080")
-    [1] |}];
+    ((code unknown)
+     (msg
+      "call failed with unknown reason: http call failed: Couldn't connect to server"))
+    [1]
+    |}];
   ()
 ;;

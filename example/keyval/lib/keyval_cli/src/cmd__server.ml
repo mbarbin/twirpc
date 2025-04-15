@@ -16,16 +16,19 @@ let run_cmd =
          ()
      in
      Twirpc_server.add_services twirpc_server ~to_server:server;
-     Tiny_httpd.run_exn server ~after_init:(fun () ->
-       let port = Tiny_httpd.port server in
-       Twirpc_discovery.Listening_config.advertize listening_config ~port;
-       if verbose
-       then
-         print_endline
-           (Printf.sprintf "Listening for connections on %d" port) [@coverage off];
-       Stdlib.Sys.set_signal
-         Stdlib.Sys.sigterm
-         (Signal_handle (fun (_ : int) -> Tiny_httpd.stop server)));
+     Stdlib.Sys.set_signal
+       Stdlib.Sys.sigterm
+       (Signal_handle (fun (_ : int) -> Tiny_httpd.stop server));
+     (try
+        Tiny_httpd.run_exn server ~after_init:(fun () ->
+          let port = Tiny_httpd.port server in
+          Twirpc_discovery.Listening_config.advertize listening_config ~port;
+          if verbose
+          then
+            print_endline
+              (Printf.sprintf "Listening for connections on %d" port) [@coverage off])
+      with
+      | Unix.Unix_error (Unix.EINTR, _, _) -> ());
      return ())
 ;;
 

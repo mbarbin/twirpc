@@ -26,7 +26,8 @@
   keyval
   keyval_rpc
   keyval_server
-  stdio)
+  stdio
+  unix)
  (instrumentation
   (backend bisect_ppx))
  (lint
