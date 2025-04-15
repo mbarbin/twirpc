@@ -2,6 +2,8 @@
 
 ### Added
 
+- Initialize project with libs and tests.
+
 ### Changed
 
 ### Fixed
