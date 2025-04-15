@@ -104,12 +104,24 @@
    (and
     (>= v0.17)
     (< v0.18)))
+  (shexp
+   (and
+    (>= v0.17)
+    (< v0.18)))
   (stdio
    (and
     (>= v0.17)
     (< v0.18)))
   (tiny_httpd
-   (>= 0.17))))
+   (>= 0.17))
+  (twirp_core
+   (>= 0.1))
+  (twirp_ezcurl
+   (>= 0.1))
+  (twirp_tiny_httpd
+   (>= 0.1))
+  (yojson
+   (>= 2.1.1))))
 
 (package
  (name twirpc-tests)
@@ -210,14 +222,26 @@
    (and
     (>= v0.17)
     (< v0.18)))
+  (shexp
+   (and
+    (>= v0.17)
+    (< v0.18)))
   (stdio
    (and
     (>= v0.17)
     (< v0.18)))
   (tiny_httpd
    (>= 0.17))
+  (twirp_core
+   (>= 0.1))
+  (twirp_ezcurl
+   (>= 0.1))
+  (twirp_tiny_httpd
+   (>= 0.1))
   (twirpc
    (= :version))
+  (yojson
+   (>= 2.1.1))
   (sherlodoc
    (and
     :with-doc
