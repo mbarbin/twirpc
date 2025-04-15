@@ -28,14 +28,48 @@
    (and
     (>= v0.17)
     (< v0.18)))
+  (base_quickcheck
+   (and
+    (>= v0.17)
+    (< v0.18)))
   (cmdlang
    (>= 0.0.9))
+  (cmdlang-to-cmdliner
+   (>= 0.0.9))
+  (cmdliner
+   (>= 1.3.0))
+  (expect_test_helpers_core
+   (and
+    (>= v0.17)
+    (< v0.18)))
+  (ezcurl
+   (>= 0.2.4))
+  (fmt
+   (>= 0.9.0))
+  (fpath
+   (>= 0.7.3))
+  (fpath-sexp0
+   (>= 0.2.2))
+  (letfun
+   (>= 0.0.1))
+  (parsexp
+   (and
+    (>= v0.17)
+    (< v0.18)))
+  (pbrt
+   (>= 3.1))
+  (pbrt_services
+   (>= 3.1))
+  (pbrt_yojson
+   (>= 3.1))
   (pplumbing
    (>= 0.0.9))
   (ppx_compare
    (and
     (>= v0.17)
     (< v0.18)))
+  (ppx_deriving
+   (>= 5.2.1))
   (ppx_enumerate
    (and
     (>= v0.17)
@@ -60,12 +94,22 @@
    (and
     (>= v0.17)
     (< v0.18)))
+  (ppx_yojson_conv
+   (and
+    (>= v0.17)
+    (< v0.18)))
   (ppxlib
    (>= 0.33))
+  (sexplib0
+   (and
+    (>= v0.17)
+    (< v0.18)))
   (stdio
    (and
     (>= v0.17)
-    (< v0.18)))))
+    (< v0.18)))
+  (tiny_httpd
+   (>= 0.17))))
 
 (package
  (name twirpc-tests)
@@ -81,18 +125,48 @@
    (and
     (>= v0.17)
     (< v0.18)))
+  (base_quickcheck
+   (and
+    (>= v0.17)
+    (< v0.18)))
   (cmdlang
    (>= 0.0.9))
+  (cmdlang-to-cmdliner
+   (>= 0.0.9))
+  (cmdliner
+   (>= 1.3.0))
   (expect_test_helpers_core
    (and
     (>= v0.17)
     (< v0.18)))
+  (ezcurl
+   (>= 0.2.4))
+  (fmt
+   (>= 0.9.0))
+  (fpath
+   (>= 0.7.3))
+  (fpath-sexp0
+   (>= 0.2.2))
+  (letfun
+   (>= 0.0.1))
+  (parsexp
+   (and
+    (>= v0.17)
+    (< v0.18)))
+  (pbrt
+   (>= 3.1))
+  (pbrt_services
+   (>= 3.1))
+  (pbrt_yojson
+   (>= 3.1))
   (pplumbing
    (>= 0.0.9))
   (ppx_compare
    (and
     (>= v0.17)
     (< v0.18)))
+  (ppx_deriving
+   (>= 5.2.1))
   (ppx_enumerate
    (and
     (>= v0.17)
@@ -126,12 +200,22 @@
    (and
     (>= v0.17)
     (< v0.18)))
+  (ppx_yojson_conv
+   (and
+    (>= v0.17)
+    (< v0.18)))
   (ppxlib
    (>= 0.33))
+  (sexplib0
+   (and
+    (>= v0.17)
+    (< v0.18)))
   (stdio
    (and
     (>= v0.17)
     (< v0.18)))
+  (tiny_httpd
+   (>= 0.17))
   (twirpc
    (= :version))
   (sherlodoc
