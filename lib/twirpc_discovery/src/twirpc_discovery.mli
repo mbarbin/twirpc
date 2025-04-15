@@ -8,7 +8,7 @@ module Connection_config : sig
       service running?"
 
       The intended usage for this library is to add {!arg} to you command line
-      parameters, and resolve the {!t} using {!sockaddr} in the body of your
+      parameters, and resolve the {!t} using {!port} in the body of your
       client command. *)
 
   type t =
@@ -34,7 +34,7 @@ module Listening_config : sig
       advertize that information so clients can find you.
 
       The intended usage for this library is to add {!arg} to you command line
-      parameters, and resolve the {!t} using {!sockaddr} in the body of your
+      parameters, and resolve the {!t} using {!port} in the body of your
       server command. Also, you should call {!advertize} after starting to
       serve, to save the discovery information to a file that clients will load. *)
 
