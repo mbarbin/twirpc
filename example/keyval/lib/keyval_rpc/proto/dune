@@ -1,0 +1,31 @@
+(library
+ (name keyval_rpc_proto)
+ (public_name twirpc-tests.keyval-rpc-proto)
+ (flags :standard -w +a-4-40-41-42-44-45-48-66 -warn-error +a)
+ (libraries pbrt pbrt_services pbrt_yojson)
+ (preprocess
+  (pps ppx_deriving.eq ppx_deriving.show)))
+
+(rule
+ (copy %{project_root}/.ocamlformat .ocamlformat))
+
+(rule
+ (targets keyval.ml keyval.mli)
+ (deps
+  .ocamlformat
+  (glob_files *.proto))
+ (alias runtest)
+ (mode promote)
+ (action
+  (progn
+   (run
+    ocaml-protoc
+    keyval.proto
+    --ocaml_all_types_ppx
+    "deriving show { with_path = false }, eq"
+    --binary
+    --yojson
+    --services
+    --ml_out
+    .)
+   (run ocamlformat --inplace %{targets}))))

@@ -84,7 +84,7 @@ module Server = struct
   let listening_on_port t = t.listening_on_port
 
   let with_connection { test = { context = _ }; listening_on_port = port; _ } ~f =
-    Twirpc_client.with_connection ~host:"localhost" ~port ~f:(fun connection ->
+    Twirpc_client.with_connection ~port ~f:(fun connection ->
       f connection;
       Ok ())
     |> Or_error.ok_exn

@@ -16,10 +16,10 @@ module Twirp_error = struct
   [@@deriving sexp_of]
 end
 
-let with_connection ~host ~port ~f =
+let with_connection ~port ~f =
   Ezcurl.with_client
     ~set_opts:(fun _curl -> ())
-    (fun client -> f { Connection.client; host; port })
+    (fun client -> f { Connection.client; host = "localhost"; port })
 ;;
 
 let call ?(encoding = `JSON) rpc ~(connection : Connection.t) request =

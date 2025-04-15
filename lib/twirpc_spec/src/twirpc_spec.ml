@@ -155,3 +155,36 @@ let server
     ; handlers = [ handler ]
     }
 ;;
+
+module Private = struct
+  let encode (type a) (encode : a -> Pbrt.Encoder.t -> unit) (a : a) =
+    let encoder = Pbrt.Encoder.create () in
+    encode a encoder;
+    Pbrt.Encoder.to_string encoder
+  ;;
+
+  let decode (type a) (decode : Pbrt.Decoder.t -> a) buffer =
+    let decoder = Pbrt.Decoder.of_string buffer in
+    decode decoder
+  ;;
+
+  let encode_request t =
+    let client_rpc = client_rpc t in
+    encode client_rpc.encode_pb_req
+  ;;
+
+  let decode_request t =
+    let server_rpc = server_rpc t in
+    decode server_rpc.decode_pb_req
+  ;;
+
+  let encode_response t =
+    let server_rpc = server_rpc t in
+    encode server_rpc.encode_pb_res
+  ;;
+
+  let decode_response t =
+    let client_rpc = client_rpc t in
+    decode client_rpc.decode_pb_res
+  ;;
+end

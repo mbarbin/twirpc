@@ -1,0 +1,33 @@
+(library
+ (name twirpc_quickcheck)
+ (public_name twirpc.twirpc-quickcheck)
+ (flags
+  :standard
+  -w
+  +a-4-40-41-42-44-45-48-66
+  -warn-error
+  +a
+  -open
+  Base
+  -open
+  Expect_test_helpers_base)
+ (libraries
+  base
+  base_quickcheck
+  expect_test_helpers_core.expect_test_helpers_base
+  twirpc_spec)
+ (instrumentation
+  (backend bisect_ppx))
+ (lint
+  (pps ppx_js_style -allow-let-operators -check-doc-comments))
+ (preprocess
+  (pps
+   -unused-type-warnings=force
+   ppx_compare
+   ppx_enumerate
+   ppx_hash
+   ppx_here
+   ppx_let
+   base_quickcheck.ppx_quickcheck
+   ppx_sexp_conv
+   ppx_sexp_value)))

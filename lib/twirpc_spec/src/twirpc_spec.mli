@@ -73,3 +73,13 @@ val server_rpc
     wrapped value. This is outside of the intended usage, so we should
     probably revisit at some point. *)
 val server : _ t -> handler:'a -> 'a Pbrt_services.Server.t
+
+module Private : sig
+  (** The [Private] module is not meant to be used by the users of the library
+      directly. It is exported for tests. *)
+
+  val encode_request : ('request, _) t -> 'request -> string
+  val decode_request : ('request, _) t -> string -> 'request
+  val encode_response : (_, 'response) t -> 'response -> string
+  val decode_response : (_, 'response) t -> string -> 'response
+end

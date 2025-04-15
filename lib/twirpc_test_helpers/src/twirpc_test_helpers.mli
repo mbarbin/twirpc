@@ -44,10 +44,14 @@ module Sockaddr_kind : sig
       used is defined by {!module:Twirpc_discovery.Discovery_file}. *)
 
   type t =
-    (* Note from mbarbin: Unix sockets are not (yet?) supported by the
-       underlying libraries used in this project, so for now we've
-       removed that functionality. *)
-    (* | Unix_socket *)
+    (*_ Note from mbarbin: Unix sockets are not (yet?) supported by the
+      underlying libraries used in this project, so for now we've
+      removed that functionality.
+
+      {[
+        | Unix_socket
+      ]}
+    *)
     | Tcp_localhost
 end
 
