@@ -10,14 +10,14 @@ This is mostly an exploratory work to gain experience with the dependencies.
 
 ## Relationship to eio-rpc and others
 
-I have repos where I am conducting similar work. See:
+I have other repos where I am conducting similar work. See:
 
 - [eio-rpc](https://github.com/mbarbin/eio-rpc)
 - [vifrpc](https://github.com/mbarbin/vifrpc)
 
 All are *MIT*.
 
-I have in fact copied large portions of the code. I don't intend to maintain it all overtime, so this is just some convenient workflow for me at the moment, so I can easily diff the repos and appreciate the differences between the setups. TBD.
+I have in fact copied large portions of the code used in this repository from my earlier work in `eio-rpc`. I don't intend to maintain it all overtime, so this is just some convenient workflow for me at the moment, so I can easily diff the repos and appreciate the differences between the setups. TBD.
 
 ## Build
 
