@@ -2,6 +2,9 @@ module Connection : sig
   type t
 end
 
+(** Unix sockets are not supported by the underlying deps used in this project,
+    so we've removed that functionality, and require a [port] here. The server
+    is assumed to be running on the localhost. *)
 val with_connection : port:int -> f:(Connection.t -> 'a Or_error.t) -> 'a Or_error.t
 
 (** call a given RPC [encoding] defaults to [JSON]. *)

@@ -1,6 +1,4 @@
 module Connection = struct
-  (* CR mbarbin: I wish to be able to use unix domain sockets. *)
-
   type t =
     { client : Ezcurl.t
     ; host : string
