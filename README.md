@@ -1,6 +1,7 @@
 # twirpc
 
 [![CI Status](https://github.com/mbarbin/twirpc/workflows/ci/badge.svg)](https://github.com/mbarbin/twirpc/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/mbarbin/twirpc/badge.svg?branch=main)](https://coveralls.io/github/mbarbin/twirpc?branch=main)
 
 *twirpc* is a collection of opinionated wrappers to build RPC clients and servers with `ocaml-twirp`.
 
