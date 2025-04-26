@@ -70,7 +70,9 @@ type t = { context : Shexp_process.Context.t }
 
 let run ~f =
   let t = { context = Shexp_process.Context.create () } in
-  Exn.protect ~f:(fun () -> f t) ~finally:(fun () -> ())
+  Exn.protect
+    ~f:(fun () -> f t)
+    ~finally:(fun () -> Shexp_process.Context.dispose t.context)
 ;;
 
 module Server = struct
