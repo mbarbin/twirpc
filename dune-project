@@ -25,13 +25,9 @@
   (ocaml
    (>= 5.2))
   (base
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (base_quickcheck
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (cmdlang
    (>= 0.0.9))
   (cmdlang-to-cmdliner
@@ -39,9 +35,7 @@
   (cmdliner
    (>= 1.3.0))
   (expect_test_helpers_core
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ezcurl
    (>= 0.2.4))
   (fmt
@@ -55,9 +49,7 @@
   (ocaml-protoc
    (>= 3.1))
   (parsexp
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (pbrt
    (>= 3.1))
   (pbrt_services
@@ -67,53 +59,31 @@
   (pplumbing
    (>= 0.0.12))
   (ppx_compare
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_deriving
    (>= 5.2.1))
   (ppx_enumerate
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_hash
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_here
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_let
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_sexp_conv
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_sexp_value
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_yojson_conv
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppxlib
    (>= 0.33))
   (sexplib0
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (shexp
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (stdio
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (tiny_httpd
    (>= 0.17))
   (twirp_core
@@ -136,13 +106,9 @@
     :with-dev-setup
     (= 0.27.0)))
   (base
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (base_quickcheck
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (cmdlang
    (>= 0.0.9))
   (cmdlang-to-cmdliner
@@ -150,9 +116,7 @@
   (cmdliner
    (>= 1.3.0))
   (expect_test_helpers_core
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ezcurl
    (>= 0.2.4))
   (fmt
@@ -166,9 +130,7 @@
   (ocaml-protoc
    (>= 3.1))
   (parsexp
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (pbrt
    (>= 3.1))
   (pbrt_services
@@ -178,62 +140,37 @@
   (pplumbing
    (>= 0.0.12))
   (ppx_compare
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_deriving
    (>= 5.2.1))
   (ppx_enumerate
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_expect
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_hash
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_here
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_js_style
    (and
     :with-dev-setup
-    (>= v0.17)
-    (< v0.18)))
+    (>= v0.17)))
   (ppx_let
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_sexp_conv
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_sexp_value
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_yojson_conv
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppxlib
    (>= 0.33))
   (sexplib0
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (shexp
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (stdio
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (tiny_httpd
    (>= 0.17))
   (twirp_core
@@ -264,9 +201,7 @@
     :with-dev-setup
     (= 0.27.0)))
   (base
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (bisect_ppx
    (and
     :with-dev-setup
@@ -274,56 +209,35 @@
   (cmdlang
    (>= 0.0.9))
   (expect_test_helpers_core
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ocaml-protoc
    (>= 3.1))
   (pplumbing
    (>= 0.0.12))
   (ppx_compare
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_enumerate
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_expect
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_hash
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_here
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_js_style
    (and
     :with-dev-setup
-    (>= v0.17)
-    (< v0.18)))
+    (>= v0.17)))
   (ppx_let
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_sexp_conv
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_sexp_value
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppxlib
    (>= 0.33))
   (stdio
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (twirpc
    (= :version))
   (twirpc-tests
