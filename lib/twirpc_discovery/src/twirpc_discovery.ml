@@ -23,14 +23,14 @@ module Connection_config = struct
         [ Switch.port ]
         Param.int
         ~docv:"PORT"
-        ~doc:"connect to localhost TCP port"
+        ~doc:"Connect to localhost TCP port."
       >>| Option.map ~f:(fun port -> Tcp { host = `Localhost; port })
     and+ by_discovery_file =
       Arg.named_opt
         [ Switch.discovery_file ]
         (Param.validated_string (module Fpath))
         ~docv:"PATH"
-        ~doc:"read sockaddr from discovery file"
+        ~doc:"Read sockaddr from discovery file."
       >>| Option.map ~f:(fun path -> Discovery_file { path })
     in
     match List.filter_opt [ by_port; by_discovery_file ] with
@@ -38,7 +38,7 @@ module Connection_config = struct
     | [] -> Or_error.return (Tcp { host = `Localhost; port = 8080 })
     | _ :: _ :: _ ->
       Or_error.error_string
-        "Only one of --port, --unix-socket, or --discovery-file can be used"
+        "Only one of --port, --unix-socket, or --discovery-file can be used."
   ;;
 
   let to_args t =
@@ -74,7 +74,7 @@ module Listening_config = struct
         let+ chosen_by_os =
           Arg.flag
             [ Switch.port_chosen_by_os ]
-            ~doc:"listen on localhost TCP port chosen by OS (default)"
+            ~doc:"Listen on localhost TCP port chosen by OS (default)."
         in
         if chosen_by_os then Some (Specification.Tcp { port = `Chosen_by_OS }) else None
       and+ by_port =
@@ -82,20 +82,20 @@ module Listening_config = struct
           [ Switch.port ]
           Param.int
           ~docv:"PORT"
-          ~doc:"listen on localhost TCP port"
+          ~doc:"Listen on localhost TCP port."
         >>| Option.map ~f:(fun port -> Specification.Tcp { port = `Supplied port })
       in
       match List.filter_opt [ by_os; by_port ] with
       | [ spec ] -> Or_error.return spec
       | [] -> Or_error.return (Specification.Tcp { port = `Chosen_by_OS })
       | _ :: _ :: _ ->
-        Or_error.error_string "Only one of --port or --port-chosen-by-os can be used"
+        Or_error.error_string "Only one of --port or --port-chosen-by-os can be used."
     and+ discovery_file =
       Arg.named_opt
         [ Switch.discovery_file ]
         (Param.validated_string (module Fpath))
         ~docv:"PATH"
-        ~doc:"save sockaddr to discovery file"
+        ~doc:"Save sockaddr to discovery file."
     in
     match specification with
     | Error _ as error -> error

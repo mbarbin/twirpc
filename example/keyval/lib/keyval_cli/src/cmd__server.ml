@@ -1,9 +1,9 @@
 let run_cmd =
   Command.make
-    ~summary:"run the server"
+    ~summary:"Run the server."
     (let open Command.Std in
      let+ listening_config = Twirpc_discovery.Listening_config.arg
-     and+ verbose = Arg.flag [ "verbose" ] ~doc:"be more verbose" in
+     and+ verbose = Arg.flag [ "verbose" ] ~doc:"Be more verbose." in
      let%bind listening_config = listening_config in
      let server = Keyval_server.create () in
      let twirpc_server = Keyval_server.implement_rpcs server in
@@ -32,4 +32,4 @@ let run_cmd =
      return ())
 ;;
 
-let main = Command.group ~summary:"manage the server" [ "run", run_cmd ]
+let main = Command.group ~summary:"Manage the server." [ "run", run_cmd ]
