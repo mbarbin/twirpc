@@ -56,8 +56,6 @@
    (>= 3.1))
   (pbrt_yojson
    (>= 3.1))
-  (pplumbing
-   (>= 0.0.14))
   (ppx_compare
    (>= v0.17))
   (ppx_deriving
@@ -137,8 +135,6 @@
    (>= 3.1))
   (pbrt_yojson
    (>= 3.1))
-  (pplumbing
-   (>= 0.0.14))
   (ppx_compare
    (>= v0.17))
   (ppx_deriving
@@ -212,8 +208,6 @@
    (>= v0.17))
   (ocaml-protoc
    (>= 3.1))
-  (pplumbing
-   (>= 0.0.14))
   (ppx_compare
    (>= v0.17))
   (ppx_enumerate
